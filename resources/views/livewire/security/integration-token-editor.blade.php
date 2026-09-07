@@ -40,7 +40,7 @@
                 @enderror
             </fieldset>
         @else
-            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.025] dark:text-fg-dim">
+            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.05] dark:text-fg-dim">
                 <div class="font-medium text-black dark:text-fg">Capability: Secrets (read-only)</div>
                 <p>Coolify reads secrets from this provider at deployment time. Secret values are never stored in
                     the Coolify database.</p>
@@ -48,7 +48,7 @@
         @endif
 
         @if ($integrationToken->provider === 'cloudflare' && in_array('dns', $capabilities, true))
-            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.025] dark:text-fg-dim">
+            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.05] dark:text-fg-dim">
                 <div class="font-medium text-black dark:text-fg">Required Cloudflare permissions</div>
                 <ul class="list-inside list-disc">
                     <li>Zone - DNS - Edit</li>

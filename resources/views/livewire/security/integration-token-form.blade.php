@@ -52,7 +52,7 @@
                 @enderror
             </fieldset>
         @else
-            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.025] dark:text-fg-dim">
+            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.05] dark:text-fg-dim">
                 <div class="font-medium text-black dark:text-fg">Capability: Secrets (read-only)</div>
                 <p>Coolify reads secrets from this provider at deployment time and writes them into the generated
                     <code>.env</code> file. Secret values are never stored in the Coolify database.</p>
@@ -60,7 +60,7 @@
         @endif
 
         @if ($provider === 'cloudflare' && in_array('dns', $capabilities, true))
-            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.025] dark:text-fg-dim">
+            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.05] dark:text-fg-dim">
                 <div class="font-medium text-black dark:text-fg">Required Cloudflare permissions</div>
                 <ul class="list-inside list-disc">
                     <li>Zone - DNS - Edit</li>
@@ -74,19 +74,19 @@
                 </a>
             </div>
         @elseif ($provider === 'doppler')
-            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.025] dark:text-fg-dim">
+            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.05] dark:text-fg-dim">
                 <div class="font-medium text-black dark:text-fg">Recommended Doppler token</div>
                 <p>Use a read-only <span class="font-medium">Service Token</span> (dp.st.*). It is pinned to one
                     project and config. Create it in Doppler under Project &gt; Config &gt; Access.</p>
             </div>
         @elseif ($provider === 'infisical')
-            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.025] dark:text-fg-dim">
+            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.05] dark:text-fg-dim">
                 <div class="font-medium text-black dark:text-fg">Infisical machine identity</div>
                 <p>Create a machine identity with Universal Auth and read access to your project. Paste the client
                     ID above and the client secret in the secret field.</p>
             </div>
         @elseif ($provider === 'vault')
-            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.025] dark:text-fg-dim">
+            <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-3 text-[11px] leading-5 text-neutral-600 dark:border-white/[0.08] dark:bg-white/[0.05] dark:text-fg-dim">
                 <div class="font-medium text-black dark:text-fg">Vault token</div>
                 <p>Use a token with read access to your KV v2 secrets. Prefer a periodic or long-lived token —
                     deployments fail when the token expires.</p>
